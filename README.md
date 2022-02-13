@@ -39,4 +39,6 @@ List<PairedDevice> devices = await WiseBluetoothPrint.getPairedDevices();
 
 ![A new flutter plugin project to get print out from bluetooth printers for Android.](https://github.com/kaanakyalcin/wise_bluetooth_print/blob/master/blob/output1.png?raw=true)
 
-
+# Licence
+  
+  wise_bluetooth_print is free and open source software licensed under MIT License. You can use it in private and commercial projects.
