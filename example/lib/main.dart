@@ -59,16 +59,13 @@ class _MyAppState extends State<MyApp> {
                 return GestureDetector(
                   onTap: () async {
                     //ADD your zpl text here or what ever you use.
-                    /*String printText = "^XA" +
+                    String printText = "^XA" +
                         "^LH55,30" +
                         "^FO20,10^CFD,27,13^FDCompany Name^FS" +
                         "^FO20,60^AD^FD<DESCRIPTION >^FS" +
                         "^FO40,160^BY2,2.0^BCN,100,Y,N,N,N^FD<PART,-1>^FS" +
-                        "^XZ";*/
+                        "^XZ";
 
-                    String printText = "! U1 setvar 'device.languages' 'zpl'" +
-                        "! U1 setvar 'device.pnp_option' 'zpl'" +
-                        "! U1 do 'device.reset' '' <CR>";
                     await WiseBluetoothPrint.print(
                         _devices[index].socketId, printText);
                   },
