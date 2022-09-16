@@ -27,6 +27,7 @@ public class WiseBluetoothPrintPlugin implements FlutterPlugin, MethodCallHandle
 
   private OutputStream outputStream;
   private InputStream inStream;
+  String tempText = "0";
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -64,7 +65,6 @@ public class WiseBluetoothPrintPlugin implements FlutterPlugin, MethodCallHandle
     } else if(call.method.equals("print")) {
       String printStr = call.argument("printText");
       String uuid = call.argument("deviceUUID");
-      String tempText = "0";
 
       BluetoothAdapter bluetooth = BluetoothAdapter.getDefaultAdapter();
       
@@ -72,11 +72,10 @@ public class WiseBluetoothPrintPlugin implements FlutterPlugin, MethodCallHandle
       for (BluetoothDevice pairedDevice : pairedDevices) {
         ParcelUuid[] uuids = pairedDevice.getUuids();
         UUID s = uuids[0].getUuid();
-        if(s.toString().equals(uuid)){
+        if (s.toString().equals(uuid)) {
           bluetooth.cancelDiscovery();
-          try
-          {
 
+          try {
             final BluetoothSocket socket = pairedDevice.createRfcommSocketToServiceRecord(UUID.fromString(uuid));
 
             socket.connect();
@@ -108,8 +107,8 @@ public class WiseBluetoothPrintPlugin implements FlutterPlugin, MethodCallHandle
           result.success(false);
         }
       }
-      if(tempText != "1"){
-      result.success(true);
+      if(tempText != "1") {
+        result.success(true);
       }
     } else {
       result.notImplemented();
