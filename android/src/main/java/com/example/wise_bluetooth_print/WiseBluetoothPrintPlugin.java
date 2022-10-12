@@ -50,6 +50,7 @@ public class WiseBluetoothPrintPlugin implements FlutterPlugin, MethodCallHandle
             for (BluetoothDevice device : pairedDevices) {
               String deviceName = device.getName();
               String deviceHardwareAddress = device.getAddress();
+              device.fetchUuidsWithSdp();
               ParcelUuid[] uuids = device.getUuids();
               UUID socket = uuids[0].getUuid();
 
