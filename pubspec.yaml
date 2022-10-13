@@ -1,6 +1,6 @@
 name: wise_bluetooth_print
-description: A new flutter plugin project to get print out from bluetooth printers for Android.
-version: 0.0.1
+description: minor bug fixes for Android 11
+version: 0.0.2
 homepage: https://github.com/kaanakyalcin/wise_bluetooth_print
 
 environment:

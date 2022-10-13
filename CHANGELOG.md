@@ -1,3 +1,4 @@
-## [0.0.1] - 2022.02.13
+## [0.0.2] - 2022.10.13
 
-* A new flutter plugin project to get print out from bluetooth printers for Android.
+* - Printing with BZPL format added to example application.
+* - UUID fetching with SDP added to library, to fix some Android 11 devices.
