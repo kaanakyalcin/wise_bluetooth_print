@@ -66,6 +66,7 @@ public class WiseBluetoothPrintPlugin implements FlutterPlugin, MethodCallHandle
     } else if(call.method.equals("print")) {
       String printStr = call.argument("printText");
       String uuid = call.argument("deviceUUID");
+      int timeout = call.argument("timeout");
 
       BluetoothAdapter bluetooth = BluetoothAdapter.getDefaultAdapter();
       
@@ -98,7 +99,7 @@ public class WiseBluetoothPrintPlugin implements FlutterPlugin, MethodCallHandle
                   result.success(false);
                 }
               }
-            }, 100);
+            }, timeout);
           } catch (IOException e){
             tempText = "1";
             result.success(false);
