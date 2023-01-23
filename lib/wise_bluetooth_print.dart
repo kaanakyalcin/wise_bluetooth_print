@@ -22,10 +22,11 @@ class WiseBluetoothPrint {
     return devices;
   }
 
-  static Future<bool> print(String deviceUUID, String printText) async {
+  static Future<bool> print(String deviceUUID, String printText, [Map? options]) async {
     final Map<String, dynamic> params = <String, dynamic>{
       'printText': printText,
-      'deviceUUID': deviceUUID
+      'deviceUUID': deviceUUID,
+      'timeout': options?['timeout'] ?? 100
     };
     var ret = await _channel.invokeMethod('print', params);
     return ret;
