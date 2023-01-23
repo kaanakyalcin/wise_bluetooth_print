@@ -1,4 +1,4 @@
-## [0.0.2] - 2022.10.13
+## [0.0.3] - 2023.01.23
 
-* - Printing with BZPL format added to example application.
-* - UUID fetching with SDP added to library, to fix some Android 11 devices.
+* - Socket timeout is added to keep socket open for longer for print operations for multiple labels.
+* - Timeout defaults to 100ms (as original) if no timeout value is passed.

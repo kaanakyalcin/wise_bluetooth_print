@@ -1,10 +1,10 @@
 name: wise_bluetooth_print
-description: minor bug fixes for Android 11
-version: 0.0.2
+description: Socket timeout is added to keep socket open for longer for print operations for multiple labels. Timeout defaults to 100ms (as original) if no timeout value is passed.
+version: 0.0.3
 homepage: https://github.com/kaanakyalcin/wise_bluetooth_print
 
 environment:
-  sdk: ">=2.16.0 <3.0.0"
+  sdk: ">=2.16.0 <3.3.10"
   flutter: ">=2.5.0"
 
 dependencies:
