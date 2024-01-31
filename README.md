@@ -1,3 +1,5 @@
+For more details: https://wiseservices.co.uk/post/4c34fef9-3fd3-4935-9073-031c8f4258dc
+
 # wise_bluetooth_print
 
 A new flutter plugin project to get print out from bluetooth printers for Android.
@@ -42,6 +44,7 @@ List<PairedDevice> devices = await WiseBluetoothPrint.getPairedDevices();
 # List of Tested Printers
 
 - Bixolon SPP-L310
+- Zebra ZQ510
 
 # Licence
   
